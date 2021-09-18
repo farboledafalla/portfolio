@@ -12,14 +12,25 @@
     </svg>
   </label>
   <div class="ae-container-fluid rk-topbar">
-    <h1 class="rk-logo"><a href="index.html">Franklim Falla<sup>tm</sup></a></h1>
+    <h1 class="rk-logo">
+      <!-- Se usa 'routerLink' y se deja la dirección vacia usando de esa manera la ruta con el path vacio de 'app_routes' -->
+      <a routerLink="">
+        Franklim Falla<sup>tm</sup>
+      </a>
+    </h1>
     <nav class="rk-navigation">
       <ul class="rk-menu">
-        <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
+        <!-- La clase 'active' muestra el item del menu en color gris, indicando que está seleccionado -->
+        <!-- 'RouterLinkActive' aplica la clase 'active' al enlace de la ruta activa -->
+        <li routerLinkActive="active" class="rk-menu__item">
+          <!-- Se usa 'routerLink' al 'home' para que aplique correctamente la clase 'active' -->
+          <a routerLink="home" class="rk-menu__link">
+            Home
+          </a>
         </li>
-        <li class="active rk-menu__item"><a href="portfolio.html" class="rk-menu__link">Portfolio</a>
-        </li>
-        <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">Blog</a>
+        <!-- <li class="active rk-menu__item"><a href="portfolio.html" class="rk-menu__link">Portfolio</a>
+        </li> -->
+        <!-- <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">Blog</a>
         </li>
         <li class="rk-menu__item"><a href="#0" class="rk-menu__link">Pages</a>
           <nav class="rk-menu__sub">
@@ -29,8 +40,11 @@
               <li class="rk-menu__item"><a href="design-styles.html" class="rk-menu__link">Design Styles</a></li>
             </ul>
           </nav>
-        </li>
-        <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">Contact Us</a>
+        </li> -->
+        <li routerLinkActive="active" class="rk-menu__item">
+          <a routerLink="about" class="rk-menu__link">
+            About
+        </a>
         </li>
       </ul>
       <form class="rk-search">
