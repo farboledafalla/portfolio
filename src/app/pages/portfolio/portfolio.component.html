@@ -25,8 +25,9 @@
 
   <div *ngIf="!_productosService.cargando" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
     <!-- Se cambia el 'href' por 'routerLink' y se cambia la ruta -->
+    <!-- [routerLink]="['/item', producto.cod]" este código tambien funciona -->
     <a *ngFor="let producto of _productosService.productos"
-        routerLink="/item" class="animate__animated animate__fadeInDown rk-item ae-masonry__item">
+        routerLink="/item/{{ producto.cod }}" class="animate__animated animate__fadeInDown rk-item ae-masonry__item">
       <img src="assets/productos/{{producto.url}}.jpg" alt="" />
       <div class="item-meta">
         <h2>{{ producto.titulo }}</h2>
